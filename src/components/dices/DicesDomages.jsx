@@ -39,18 +39,24 @@ const DicesDomages = () => {
     }
 
     return (
-      <div>
-        <p>Results: {diceResults.join(', ')}</p>
-        <p>Sum: {sum}</p>
+      <div className='container'>
+        <div className="dice-container">
+          {diceResults.map((result, index) => (
+            <div className={`dice dice-${index}`} key={index}>
+              {result}
+            </div>
+          ))}
+        </div>
+        <p>Dégats: <span className='result'>{sum}</span></p>
       </div>
     );
   };
 
   return (
-    <div>
+    <div className='roll-container2'>
     <h2> Dégats</h2>
       <label>
-        Number of dice (1-20):
+        Nbres dés (1-20):
         <input
           type="number"
           value={numDice}
@@ -61,7 +67,7 @@ const DicesDomages = () => {
       </label>
       <br />
       <label>
-        Modifier:
+        Modificateur:
         <input
           type="number"
           value={modifier}

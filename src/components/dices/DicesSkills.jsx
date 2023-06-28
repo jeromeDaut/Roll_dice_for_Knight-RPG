@@ -33,18 +33,26 @@ const DicesSkills = () => {
     }
 
     return (
-      <div>
-        <p>Resultat: {diceResults.join(', ')}</p>
-        <p>Réussites: {evenCount}</p>
+      <div className='container'>
+        <p>Résultats:</p>
+        <div className="dice-container">
+          {diceResults.map((result, index) => (
+            <div className={`dice dice-${index}`} key={index}>
+              {result}
+            </div>
+          ))}
+        </div>
+        <p>Nombre de réussites = <span className='result'>{evenCount}</span></p>
+        <p>+ Overdrives si au moins une réussite</p>
       </div>
     );
   };
-
+  
   return (
-    <div>
+    <div className='roll-container'>
     <h2>Test de compétences</h2>
       <label>
-        Nombre de dés (1-20):
+        Nbres dés (1-20):
         <input
           type="number"
           value={numDice}
