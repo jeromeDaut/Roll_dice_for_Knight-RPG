@@ -1,0 +1,74 @@
+.dice-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5% 20%;
+    .dice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(161,14,14);
+        background: radial-gradient(circle, rgba(161,14,14,1) 56%, rgba(207,170,170,1) 100%);
+        color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    p{
+        text-align: center;
+        margin: 5px;
+    }
+}
+.result{
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(161,14,14);
+    background: radial-gradient(circle, rgb(8, 21, 199) 56%, rgba(207,170,170,1) 100%);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    
+}
+input{
+    width: 20px;
+    // margin: 0 10px ;
+}
+.roll-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #000;
+    padding-bottom: 20px;
+}
+.roll-container2{
+    color: #000;
+    background: #acacb4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    h2{
+        background: #acacb4;
+    }
+}
+button{
+    margin: 15px;
+    background: radial-gradient(circle, rgb(129, 44, 179) 25%, rgb(180, 111, 189) 100%);
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+h2{
+    background: #000;
+}
