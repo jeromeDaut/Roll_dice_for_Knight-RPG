@@ -29,8 +29,9 @@ const DicesDomages = () => {
   };
 
   const handleModifierChange = (event) => {
-    const value = parseInt(event.target.value);
-    setModifier(value);
+    const value = event.target.value;
+    const modifierValue = value === "" ? "" : parseInt(value);
+    setModifier(modifierValue);
   };
 
   const renderDiceResults = () => {
@@ -72,6 +73,7 @@ const DicesDomages = () => {
           type="number"
           value={modifier}
           onChange={handleModifierChange}
+          min={0}
         />
       </label>
       <br />
