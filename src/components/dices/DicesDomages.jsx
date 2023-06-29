@@ -47,7 +47,7 @@ const DicesDomages = () => {
             </div>
           ))}
         </div>
-        <p>Dégats: <span className='result'>{sum}</span></p>
+        <p>Total: <span className='result'>{sum}</span></p>
       </div>
     );
   };
@@ -56,7 +56,7 @@ const DicesDomages = () => {
     <div className='roll-container2'>
     <h2> Dégats</h2>
       <label>
-        Nbres dés (1-20):
+        Nbre de dés (1-20):
         <input
           type="number"
           value={numDice}
@@ -75,7 +75,7 @@ const DicesDomages = () => {
         />
       </label>
       <br />
-      <button onClick={rollDice}>Roll Dice</button>
+      <button onClick={rollDice}>Lancer les dés</button>
       {renderDiceResults()}
     </div>
   );
