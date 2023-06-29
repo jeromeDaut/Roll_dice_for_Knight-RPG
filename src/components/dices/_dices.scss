@@ -1,14 +1,20 @@
-.dice-container{
+@mixin flexCenter{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.dice-container{
+    @include flexCenter;
     flex-wrap: wrap;
     gap: 5px;
     padding: 5% 20%;
     .dice {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCenter;
         background: rgb(161,14,14);
         background: radial-gradient(circle, rgba(161,14,14,1) 56%, rgba(207,170,170,1) 100%);
         color: #fff;
@@ -17,7 +23,6 @@
         width: 20px;
         height: 20px;
     }
-    
 }
 .container{
     display: flex;
@@ -28,9 +33,6 @@
     }
 }
 .result{
-    // display: flex;
-    align-items: center;
-    justify-content: center;
     background: rgb(161,14,14);
     background: radial-gradient(circle, rgb(8, 21, 199) 56%, rgba(207,170,170,1) 100%);
     color: #fff;
@@ -42,21 +44,16 @@
 }
 input{
     width: 20px;
-    // margin: 0 10px ;
 }
 .roll-container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    @include flexColumn;
     background: #000;
     padding-bottom: 20px;
 }
 .roll-container2{
+    @include flexColumn;
     color: #000;
     background: #acacb4;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     padding-bottom: 20px;
     h2{
         background: #acacb4;
