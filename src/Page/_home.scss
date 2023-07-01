@@ -1,5 +1,4 @@
 body{
-    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,10 +12,11 @@ body{
 
 #root{
     width: 100%;
-    height: 100vh;
+    font-family: 'segoe-ui-black', sans-serif;
+    
 }
 
 main{
     text-align: center;
-   
+//    height: 100vh;
 }
