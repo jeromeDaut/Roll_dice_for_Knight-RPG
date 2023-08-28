@@ -9,6 +9,8 @@ body{
     color:aliceblue;
     z-index: -5;
     margin: 0 auto;
+    max-width: 450px;
+    overflow-y: scroll;
 }
 .bg{
     position: relative;
