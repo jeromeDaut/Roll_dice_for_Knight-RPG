@@ -27,8 +27,9 @@ const DicesDomages = () => {
     value = Math.max(1, Math.min(20, value)); // Clamp the value between 1 and 20
     setNumDice(value);
   };
-  const handleNumDiceInputKeyPress = (event) => {
+  const handleNumDiceInputKeyDown = (event) => {
     if (event.key === 'Enter') {
+      event.preventDefault(); 
       rollDice();
     }
   };
@@ -66,7 +67,7 @@ const DicesDomages = () => {
           type="number"
           value={numDice}
           onChange={handleNumDiceChange}
-          onKeyDown={handleNumDiceInputKeyPress}
+          onKeyDown={handleNumDiceInputKeyDown}
           min={1}
           max={20}
         />

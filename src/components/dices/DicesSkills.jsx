@@ -26,12 +26,17 @@ const DicesSkills = () => {
     value = Math.max(1, Math.min(20, value)); // Clamp the value between 1 and 20
     setNumDice(value);
   };
+  const handleNumDiceInputKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); 
+      rollDice();
+    }
+  };
 
   const renderDiceResults = () => {
     if (diceResults.length === 0) {
       return null;
     }
-
     return (
       <div className='container'>
         <div className="dice-container">
@@ -57,6 +62,7 @@ const DicesSkills = () => {
           type="number"
           value={numDice}
           onChange={handleNumDiceChange}
+          onKeyDown={handleNumDiceInputKeyDown}
           min={1}
           max={20}
         />
