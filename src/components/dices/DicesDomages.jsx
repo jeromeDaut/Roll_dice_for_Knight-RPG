@@ -79,6 +79,7 @@ const DicesDomages = () => {
           type="number"
           value={modifier}
           onChange={handleModifierChange}
+          onKeyDown={handleNumDiceInputKeyDown}
           min={0}
         />
       </label>
