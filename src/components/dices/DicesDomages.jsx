@@ -40,8 +40,8 @@ const DicesDomages = () => {
     }
 
     return (
-      <div className='container'>
-        <div className="dice-container">
+      <div className='container '>
+        <div className="dice-container ">
           {diceResults.map((result, index) => (
             <div className={`dice dice-${index}`} key={index}>
               {result}
@@ -54,8 +54,8 @@ const DicesDomages = () => {
   };
 
   return (
-    <div className='roll-container2'>
-    <h2> Dégats</h2>
+    <div className='roll-container2 dice-container2'>
+    <h2>Dégâts</h2>
       <label>
         Nbre de dés (1-20):
         <input
@@ -77,8 +77,11 @@ const DicesDomages = () => {
         />
       </label>
       <br />
-      <button onClick={rollDice}>Lancer les dés</button>
+      <div className='roll-btn'>
+      <button onClick={rollDice}  className="button-85" ><img src='/rolling-dice.png' alt='' /></button>
       {renderDiceResults()}
+      </div>
+
     </div>
   );
 };

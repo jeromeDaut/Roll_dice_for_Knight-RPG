@@ -49,7 +49,8 @@ const DicesSkills = () => {
   
   return (
     <div className='roll-container'>
-    <h2>Test de caractéristiques</h2>
+            <h2>Caractéristiques</h2>
+
       <label>
         Nbre de dés (1-20):
         <input
@@ -60,8 +61,10 @@ const DicesSkills = () => {
           max={20}
         />
       </label>
-      <button onClick={rollDice}>Lancer les dés</button>
+      <div className="roll-btn">
+      <button onClick={rollDice}  className="button-85" ><img src='/rolling-dice.png' alt='' /></button>
       {renderDiceResults()}
+      </div>
     </div>
   );
 };
