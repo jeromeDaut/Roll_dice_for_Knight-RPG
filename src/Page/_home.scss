@@ -3,20 +3,27 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0;
-    padding: 10px;
+    font-size: 0.9rem;
     position: relative;
     background-color: rgb(44, 44, 44);
     color:aliceblue;
+    z-index: -5;
+    margin: 0 auto;
 }
-
+.bg{
+    position: relative;
+    width: 102%;
+    height: 100vh;
+    max-height: 130vh;
+}
 #root{
     width: 100%;
     font-family: 'segoe-ui-black', sans-serif;
-    
+    position: absolute;
+    margin-top: 20px;
+    padding-top: 50px;
 }
 
 main{
     text-align: center;
-//    height: 100vh;
 }
